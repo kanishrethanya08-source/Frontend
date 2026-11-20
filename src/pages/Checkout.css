@@ -1,0 +1,86 @@
+.checkout-page { background: #fafafa; }
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.step-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.step-circle {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e8c8dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--gray);
+  background: white;
+  transition: all 0.3s;
+}
+.step-item.active .step-circle { border-color: var(--primary); color: var(--primary); background: rgba(107,26,78,0.08); }
+.step-item.done .step-circle { border-color: var(--primary); background: var(--primary); color: white; }
+.step-item span { font-size: 0.78rem; font-weight: 500; color: var(--gray); }
+.step-item.active span, .step-item.done span { color: var(--primary); font-weight: 600; }
+.step-line { flex: 1; height: 2px; background: #e8c8dc; min-width: 40px; margin: 0 8px; margin-bottom: 20px; transition: background 0.3s; }
+.step-line.done { background: var(--primary); }
+.checkout-card { background: white; border-radius: var(--radius); padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+.checkout-section-title { font-family: var(--font-heading); font-size: 1.3rem; color: var(--dark); margin-bottom: 24px; }
+.form-label-custom { font-size: 0.82rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; display: block; letter-spacing: 0.3px; }
+.pay-methods { display: flex; flex-direction: column; gap: 10px; }
+.pay-method-opt {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 1.5px solid #e8c8dc;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+.pay-method-opt i:first-child { color: var(--gray); font-size: 1.1rem; width: 20px; }
+.pay-method-opt.active { border-color: var(--primary); background: rgba(107,26,78,0.04); }
+.pay-method-opt .check { color: var(--primary); font-size: 1rem; }
+.review-items { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.review-item { display: flex; align-items: center; gap: 14px; padding: 12px; background: var(--light); border-radius: var(--radius-sm); }
+.review-item img { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; }
+.review-item-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.ri-brand { font-size: 0.68rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.ri-name { font-size: 0.88rem; font-weight: 600; color: var(--dark); }
+.ri-qty { font-size: 0.78rem; color: var(--gray); }
+.ri-price { font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
+.review-address { padding: 12px 16px; background: rgba(107,26,78,0.06); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--dark); }
+.review-address i { color: var(--primary); }
+.checkout-summary { background: white; border-radius: var(--radius); padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); position: sticky; top: 100px; }
+.summary-item { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.summary-item img { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; }
+.si-info { flex: 1; }
+.si-name { font-size: 0.82rem; font-weight: 600; color: var(--dark); display: block; }
+.si-qty { font-size: 0.75rem; color: var(--gray); }
+.si-price { font-weight: 700; font-size: 0.88rem; white-space: nowrap; }
+.summary-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.88rem; }
+.summary-row.total { font-weight: 700; font-size: 1.05rem; }
+.summary-divider { border: none; border-top: 1px dashed #e8c8dc; margin: 10px 0; }
+.trust-badges { display: flex; flex-direction: column; gap: 6px; }
+.trust-badges span { font-size: 0.75rem; color: var(--gray); display: flex; align-items: center; gap: 8px; }
+.trust-badges i { color: var(--primary); }
+.order-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: 40px;
+}
+.success-icon { font-size: 5rem; margin-bottom: 24px; animation: popIn 0.5s ease; }
+@keyframes popIn { 0%{transform:scale(0)} 80%{transform:scale(1.1)} 100%{transform:scale(1)} }
+.order-success h2 { font-family: var(--font-heading); font-size: 2.2rem; color: var(--dark); margin-bottom: 12px; }
+.order-success p { color: var(--gray); max-width: 500px; line-height: 1.7; margin-bottom: 24px; }
+.order-id-box { background: var(--light); border-radius: var(--radius-sm); padding: 12px 24px; font-size: 0.9rem; color: var(--dark); border: 1.5px dashed var(--primary); }
